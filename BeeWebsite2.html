@@ -1854,7 +1854,41 @@
         .footer-legal a:hover { 
             color: var(--gold-light); 
         } 
- 
+
+        
+/* FOOTER CONTACT ICONS */
+.footer-contact-list {
+    display: grid;
+    gap: 14px;
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-contact-list li i,
+.footer-contact-list li svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    color: var(--gold-light);
+    margin-top: 2px;
+}
+
+.footer-contact-list li a,
+.footer-contact-list li span {
+    color: #C8B9A6;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.footer-contact-list li a:hover {
+    color: var(--gold-light);
+}
+        
  
         /* ========================================================= 
            RTL 
@@ -2284,11 +2318,7 @@
  
     
 
-/* =========================================================
-   HOME 2 DESIGN
-   Content only - header, logo, modal and footer remain unchanged
-========================================================= */
-.home2-page{overflow:hidden}
+
 .home2-page section{scroll-margin-top:100px}
 .home2-wrap{width:min(1180px,92%);margin:0 auto}
 .home2-eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold-dark);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
@@ -2461,7 +2491,7 @@ body.dark .home2-btn.alt:hover{background:var(--white)}
 .home2-learning-grid-v2 .home2-learning-card:hover{transform:translateY(-7px);box-shadow:0 18px 42px rgba(63,52,40,.11);border-color:var(--gold)}
 .home2-learning-grid-v2 .home2-learning-card:active{transform:translateY(-2px) scale(.985)}
 .home2-learning-label{font-size:11px;letter-spacing:1.6px;font-weight:800;color:var(--gold-dark);margin-bottom:18px}
-.home2-learning-grid-v2 .home2-learning-card h3{font-family:'Playfair Display',serif;font-size:27px;line-height:1.18;color:var(--brown);margin:0 0 14px}
+.home2-learning-grid-v2 .home2-learning-card h3{font-family:'Playfair Display',serif;font-size:27px;line-height:1.18;color:var(--brown);margin:0 0 14px;min-height:64px;width:100%;text-align:center}
 .home2-learning-grid-v2 .home2-learning-card p{font-size:14px;line-height:1.72;color:var(--gray);margin:0 0 22px}
 .home2-learning-grid-v2 .home2-card-link{margin-top:auto}
 .home2-routine-section{padding:112px 0}
@@ -2849,6 +2879,70 @@ body.dark .home2-cta-v2 .home2-btn.alt {
     }
 }
 
+
+@media (max-width: 600px) {
+    .container.navbar {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        box-sizing: border-box;
+    }
+
+    .navbar > .logo {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .logo-mark {
+        flex-shrink: 0;
+    }
+
+    .logo-copy h1 {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .logo-copy small {
+        font-size: 6px;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 4px;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .header-actions .icon-btn {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+    }
+
+    .header-actions .shop-btn {
+        padding: 10px 9px;
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    .header-actions .menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 36px;
+        padding: 0;
+        flex-shrink: 0;
+    }
+}
+
 </style> 
  
 </head> 
@@ -2857,9 +2951,6 @@ body.dark .home2-cta-v2 .home2-btn.alt {
 <body> 
  
  
-    <!-- ========================================================= 
-         HEADER 
-    ========================================================= --> 
  
     <header> 
  
@@ -2887,12 +2978,12 @@ body.dark .home2-cta-v2 .home2-btn.alt {
 
             <nav class="nav-links" id="navLinks">
 
-    <!-- HOME -->
+
 
             <div class="nav-dropdown home-dropdown active">
 
                 <a href="BeeWebsite2.html" class="active home-main" id="homeNavLink">
-                    Home <span class="dropdown-arrow">⌄</span>
+                    Home <span class="dropdown-arrow"></span>
                 </a>
 
         <div class="dropdown-menu">
@@ -2910,35 +3001,23 @@ body.dark .home2-cta-v2 .home2-btn.alt {
     </div>
 
 
-    <!-- PRODUCTS -->
-
     <a href="BeeWebsiteProduct.html">
         Products
     </a>
-
-
-    <!-- BEGINNER GUIDE -->
 
     <a href="BeeWebsiteBeginner's Guide.html">
         Beginner's Guide
     </a>
 
 
-    <!-- CLASSES -->
-
     <a href="BeeWebsiteClaases.html">
         Classes
     </a>
 
 
-    <!-- ABOUT -->
-
     <a href="BeeWebsiteAbout.html">
         About
     </a>
-
-
-    <!-- CONTACT -->
 
     <a href="BeeWebsiteContact.html">
         Contact
@@ -2946,10 +3025,6 @@ body.dark .home2-cta-v2 .home2-btn.alt {
 
 </nav>
 
- 
- 
-
- 
  
  
             <div class="header-actions"> 
@@ -2994,11 +3069,6 @@ body.dark .home2-cta-v2 .home2-btn.alt {
         </div> 
  
     </header> 
- 
- 
-    <!-- ========================================================= 
-         HOME 1 
-    ========================================================= --> 
  
     <main class="home2-page">
 
@@ -3092,10 +3162,10 @@ body.dark .home2-cta-v2 .home2-btn.alt {
             </div>
 
             <div class="home2-learning-grid home2-learning-grid-v2">
-                <article class="home2-learning-card home2-interactive-card"><span class="home2-learning-label">FIRST STEPS</span><h3>Meet the <span>Colony</span></h3><p>Understand the roles inside a colony and the basic parts of a hive before your first inspection.</p><a href="BeeWebsiteBeginner's Guide.html" class="home2-card-link">Open guide</a></article>
-                <article class="home2-learning-card home2-interactive-card"><span class="home2-learning-label">HIVE VISITS</span><h3>Make an <span>Inspection</span></h3><p>Learn how to approach frames, observe colony condition and leave the hive organised after your visit.</p><a href="BeeWebsiteBeginner's Guide.html" class="home2-card-link">Learn inspection</a></article>
-                <article class="home2-learning-card home2-interactive-card"><span class="home2-learning-label">THROUGH THE YEAR</span><h3>Follow the <span>Seasons</span></h3><p>Prepare your equipment and routine as temperature, forage and colony activity change throughout the year.</p><a href="BeeWebsiteBeginner's Guide.html" class="home2-card-link">Explore seasonal care</a></article>
-                <article class="home2-learning-card home2-interactive-card"><span class="home2-learning-label">HARVEST TIME</span><h3>Handle <span>Honey</span></h3><p>Follow the basic path from full frames to careful extraction and clean honey handling.</p><a href="BeeWebsiteBeginner's Guide.html" class="home2-card-link">Learn harvesting</a></article>
+                <article class="home2-learning-card home2-interactive-card"><span class="home2-learning-label">FIRST STEPS</span><h3>Meet the<br><span>Colony</span></h3><p>Understand the roles inside a colony and the basic parts of a hive before your very first inspection.</p><a href="BeeWebsiteBeginner's Guide.html" class="home2-card-link">Open guide</a></article>
+                <article class="home2-learning-card home2-interactive-card"><span class="home2-learning-label">HIVE VISITS</span><h3>Make an<br><span>Inspection</span></h3><p>Learn how to approach frames, observe colony condition and leave the hive organised after your visit.</p><a href="BeeWebsiteBeginner's Guide.html" class="home2-card-link">Learn inspection</a></article>
+                <article class="home2-learning-card home2-interactive-card"><span class="home2-learning-label">THROUGH THE YEAR</span><h3>Follow the<br><span>Seasons</span></h3><p>Prepare your equipment and routine as temperature, forage and colony activity change throughout the year.</p><a href="BeeWebsiteBeginner's Guide.html" class="home2-card-link">Explore seasonal care</a></article>
+                <article class="home2-learning-card home2-interactive-card"><span class="home2-learning-label">HARVEST TIME</span><h3>Handle<br><span>Honey</span></h3><p>Follow the basic journey from full frames to careful honey extraction, proper handling, and clean storage practices.</p><a href="BeeWebsiteBeginner's Guide.html" class="home2-card-link">Learn harvesting</a></article>
             </div>
         </div>
     </section>
@@ -3150,11 +3220,7 @@ body.dark .home2-cta-v2 .home2-btn.alt {
     </section>
 
 </main> 
- 
- 
-    <!-- ========================================================= 
-         BOOK A CLASS MODAL 
-    ========================================================= --> 
+
  
     <div 
         class="class-modal" 
@@ -3413,11 +3479,6 @@ body.dark .home2-cta-v2 .home2-btn.alt {
     </div> 
  
  
-    <!-- ========================================================= 
-         FOOTER 
-         SAME 
-    ========================================================= --> 
- 
     <footer id="contact"> 
  
         <div class="container"> 
@@ -3576,28 +3637,22 @@ body.dark .home2-cta-v2 .home2-btn.alt {
                     <h4> 
                         Contact 
                     </h4> 
- 
-                    <ul> 
- 
-                        <li> 
-                            <a href="mailto:hello@beehive.com"> 
-                                hello@beehive.com 
-                            </a> 
-                        </li> 
- 
-                        <li> 
-                            <a href="tel:+919876543210"> 
-                                +91 98765 43210 
-                            </a> 
-                        </li> 
- 
-                        <li> 
-                            <a href="#"> 
-                                Mon – Sat · 9 AM – 6 PM 
-                            </a> 
-                        </li> 
- 
-                    </ul> 
+
+                    <ul class="footer-contact-list">
+    <li>
+        <i data-lucide="mail"></i>
+        <a href="mailto:hello@beehive.com">hello@beehive.com</a>
+    </li>
+    <li>
+        <i data-lucide="phone"></i>
+        <a href="tel:+919876543210">+91 98765 43210</a>
+    </li>
+    <li>
+        <i data-lucide="clock"></i>
+        <span>Mon – Sat · 9 AM – 6 PM</span>
+    </li>
+</ul>
+                                      
  
                 </div> 
  
@@ -3629,16 +3684,10 @@ body.dark .home2-cta-v2 .home2-btn.alt {
     </footer> 
  
  
-    <!-- ========================================================= 
-         JAVASCRIPT 
-    ========================================================= --> 
  
     <script> 
  
  
-        /* ========================================================= 
-           THEME 
-        ========================================================= */ 
  
         const themeBtn = 
             document.getElementById("themeBtn"); 
@@ -3676,11 +3725,6 @@ body.dark .home2-cta-v2 .home2-btn.alt {
  
         }); 
  
- 
-        /* ========================================================= 
-           DIRECTION 
-        ========================================================= */ 
- 
         const directionBtn = 
             document.getElementById("directionBtn"); 
  
@@ -3713,10 +3757,6 @@ body.dark .home2-cta-v2 .home2-btn.alt {
  
         }); 
  
- 
-        /* ========================================================= 
-           MOBILE MENU 
-        ========================================================= */ 
  
         const menuBtn = 
             document.getElementById("menuBtn"); 
@@ -3768,9 +3808,6 @@ body.dark .home2-cta-v2 .home2-btn.alt {
             }); 
  
  
-        /* ========================================================= 
-           CART + WISHLIST STORAGE 
-        ========================================================= */ 
  
         const cartBtn = 
             document.getElementById("cartBtn"); 
@@ -4027,10 +4064,11 @@ body.dark .home2-cta-v2 .home2-btn.alt {
             ); 
  
         } 
+
  
  
     </script> 
- 
+    <script src="https://unpkg.com/lucide@latest"></script> <script> lucide.createIcons(); </script>
  
 </body> 
  

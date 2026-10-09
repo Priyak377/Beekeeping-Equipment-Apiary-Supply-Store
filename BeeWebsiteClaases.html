@@ -1646,10 +1646,6 @@
         }
 
 
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
         footer {
 
             padding: 75px 0 26px;
@@ -1870,10 +1866,11 @@
 
         }
 
+        .footer-contact-list { display: grid; gap: 14px; } .footer-contact-list li { display: flex; align-items: flex-start; gap: 9px; } .footer-contact-list li i, .footer-contact-list li svg { width: 14px; height: 14px; flex-shrink: 0; color: var(--gold-light); margin-top: 3px; stroke-width: 1.8; } .footer-contact-list li a, .footer-contact-list li span { color: #C8B9A6; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; } .footer-contact-list li a:hover { color: var(--gold-light); }
 
-        /* =========================================================
-           BOOK A CLASS MODAL
-        ========================================================= */
+
+
+
 
         .class-modal {
 
@@ -2355,10 +2352,6 @@
         }
 
 
-        /* =========================================================
-           RTL
-        ========================================================= */
-
         html[dir="rtl"] .navbar {
 
             direction: rtl;
@@ -2377,10 +2370,6 @@
 
         }
 
-
-        /* =========================================================
-           RESPONSIVE
-        ========================================================= */
 
         @media(max-width:1050px) {
 
@@ -2817,6 +2806,72 @@
 
         }
 
+        
+@media (max-width: 600px) {
+    .container.navbar {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        box-sizing: border-box;
+    }
+
+    .navbar > .logo {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .logo-mark {
+        flex-shrink: 0;
+    }
+
+    .logo-copy h1 {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .logo-copy small {
+        font-size: 6px;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 4px;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .header-actions .icon-btn {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+    }
+
+    .header-actions .shop-btn {
+        padding: 10px 9px;
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    .header-actions .menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 36px;
+        padding: 0;
+        flex-shrink: 0;
+    }
+}
+
+
+
     </style>
 
 </head>
@@ -2824,10 +2879,6 @@
 
 <body>
 
-
-    <!-- =========================================================
-         HEADER
-    ========================================================= -->
 
     <header>
 
@@ -2866,7 +2917,7 @@
 
                     <a href="Index.html" class="home-main">
 
-                        Home <span class="home-arrow">⌄</span>
+                        Home <span class="home-arrow"></span>
 
                     </a>
 
@@ -4037,39 +4088,33 @@
 
                     </h4>
 
-                    <ul>
+                    
+<ul class="footer-contact-list">
 
-                        <li>
+    <li>
+        <i data-lucide="mail"></i>
+        <a href="mailto:hello@beehive.com">
+            hello@beehive.com
+        </a>
+    </li>
 
-                            <a href="mailto:hello@beehive.com">
+    <li>
+        <i data-lucide="phone"></i>
+        <a href="tel:+919876543210">
+            +91 98765 43210
+        </a>
+    </li>
 
-                                hello@beehive.com
+    <li>
+        <i data-lucide="clock"></i>
+        <span>Mon – Sat · 9 AM – 6 PM</span>
+    </li>
 
-                            </a>
+</ul>
 
-                        </li>
+                    
 
-                        <li>
 
-                            <a href="tel:+919876543210">
-
-                                +91 98765 43210
-
-                            </a>
-
-                        </li>
-
-                        <li>
-
-                            <a href="#">
-
-                                Mon – Sat · 9 AM – 6 PM
-
-                            </a>
-
-                        </li>
-
-                    </ul>
 
                 </div>
 
@@ -4469,7 +4514,7 @@
 
     </script>
 
-
+     <script src="https://unpkg.com/lucide@latest"></script> <script> lucide.createIcons(); </script>
 </body>
 
 </html>
